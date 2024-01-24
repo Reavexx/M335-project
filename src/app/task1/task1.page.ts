@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
@@ -8,13 +8,8 @@ import { IonicModule } from '@ionic/angular';
   templateUrl: './task1.page.html',
   styleUrls: ['./task1.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule]
+  imports: [IonicModule, CommonModule, FormsModule],
 })
-export class Task1Page implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class Task1Page {
+  constructor() {}
 }

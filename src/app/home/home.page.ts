@@ -6,6 +6,7 @@ import {
   IonContent,
 } from '@ionic/angular/standalone';
 import { ExploreContainerComponent } from '../explore-container/explore-container.component';
+import { IonicModule } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -18,6 +19,7 @@ import { ExploreContainerComponent } from '../explore-container/explore-containe
     IonTitle,
     IonContent,
     ExploreContainerComponent,
+    IonicModule,
   ],
 })
 export class HomePage {

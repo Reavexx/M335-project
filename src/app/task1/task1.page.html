@@ -1,7 +1,43 @@
 <ion-content [fullscreen]="true" class="ion-padding">
-  <div class="container">
-    <img src="assets/Schnitzeljagd.png" alt="Schnitzeljagd Bild" class="schnitzeljagd-image">
-    <div class="text-container">
+  <nav>
+    <div class="container">
+      <img src="assets/Schnitzeljagd.png" alt="Schnitzeljagd Bild" class="schnitzeljagd-image">
+      <div class="text-container">
+      </div>
+      <img src="assets/pause.png" alt="pause button" class="pause-button">
+    </div>
+  </nav>
+
+
+  <!-- Title -->
+  <div class="text-container">
+    <h1>Task 1</h1>
+    <h2>Geolocation</h2>
+  </div>
+
+  <!-- Separator -->
+  <div class="separator"></div>
+
+  <!-- Explanation -->
+  <div class="text-container">
+    <p>Explanation:</p>
+    <p>You must move around the perimeter of the ping pong table.</p>
+  </div>
+
+  <!-- Separator -->
+  <div class="separator"></div>
+
+  <!-- Goal and Location Reached -->
+  <div class="text-container">
+    <div class="info-item">
+      <p>Goal:</p>
+    </div>
+    <div class="info-item">
+      <p>Location Reached:</p>
+      <ion-checkbox></ion-checkbox>
     </div>
   </div>
+
+  <!-- Continue Button -->
+  <ion-button class="continue-button">Continue</ion-button>
 </ion-content>

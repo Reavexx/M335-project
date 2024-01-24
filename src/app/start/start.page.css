@@ -1,4 +1,3 @@
-/* start.page.scss */
 ion-content {
   --background: #FFD4AE;
 }
@@ -28,11 +27,5 @@ ion-content {
 .schnitzeljagd-container .schnitzel-text {
   margin-top: -20vw;
 }
-.schnitzeljagd-container .permission-popup-modal ion-content {
-  text-align: center;
-}
-.schnitzeljagd-container .permission-popup-modal ion-content ion-button {
-  margin-top: 20px;
-}
 
-/*# sourceMappingURL=home.page.css.map */
+/*# sourceMappingURL=start.page.css.map */
