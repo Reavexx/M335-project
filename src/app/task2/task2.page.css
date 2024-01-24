@@ -1,3 +1,93 @@
+ion-content {
+  --background: #FFD4AE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust as needed */
+}
 
+.container {
+  position: relative;
+  text-align: center;
+  padding: 20px;
+  background-color: #fff; /* Add a background color */
+  border-radius: 10px; /* Add rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.pause-button, .schnitzeljagd-image {
+  position: absolute;
+}
+
+.pause-button {
+  width: 50px;
+  height: 50px;
+  top: 15px;
+  left: 20px;
+}
+
+.schnitzeljagd-image {
+  width: 100px;
+  height: 100px;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.text-container {
+  text-align: center;
+  margin-top: 40px; /* Adjust spacing from images */
+}
+
+h1, h2, p {
+  margin: 0;
+  color: black;
+  font-family: Samsung Medium;
+}
+
+h1 {
+  font-family: Samsung Bold;
+}
+
+.separator {
+  border-bottom: 6px solid #000;
+  margin: 20px 0; /* Increase margin for separation */
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; /* Add bottom margin */
+}
+.info .info-item {
+  flex: 1;
+}
+.info .info-item p {
+  margin: 0;
+}
+.info .info-item ion-checkbox {
+  margin-left: 8px;
+}
+
+.continue-button {
+  margin-top: 20px;
+  width: 100%;
+  --background: #4CAF50; /* Green button color, adjust as needed */
+  --color: #fff; /* Text color for the button */
+}
+
+@font-face {
+  font-family: "Samsung";
+  src: url("../../assets/samsungsharpsans.otf") format("opentype");
+}
+@font-face {
+  font-family: "Samsung Medium";
+  src: url("../../assets/samsungsharpsans-medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "Samsung Bold";
+  src: url("../../assets/samsungsharpsans-bold.otf") format("opentype");
+}
 
 /*# sourceMappingURL=task2.page.css.map */

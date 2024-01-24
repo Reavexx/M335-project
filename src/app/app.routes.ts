@@ -14,6 +14,10 @@ export const routes: Routes = [
     loadComponent: () => import('./task1/task1.page').then((m) => m.Task1Page),
   },
   {
+    path: 'task2',
+    loadComponent: () => import('./task2/task2.page').then((m) => m.Task2Page),
+  },
+  {
     path: 'home',
     loadComponent: () => import('./home/home.page').then((m) => m.HomePage),
   },
@@ -21,5 +25,10 @@ export const routes: Routes = [
     path: '',
     redirectTo: 'start',
     pathMatch: 'full',
+  },
+  {
+    path: 'ranking',
+    loadComponent: () =>
+      import('./ranking/ranking.page').then((m) => m.RankingPage),
   },
 ];

@@ -1,13 +1,40 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>task2</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
+  <nav>
+    <div class="container">
+      <img src="assets/Schnitzeljagd.png" alt="Schnitzeljagd Bild" class="schnitzeljagd-image">
+      <div class="text-container">
+      </div>
+      <img src="assets/pause.png" alt="pause button" class="pause-button">
+    </div>
+  </nav>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">task2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+  <!-- Title -->
+  <div class="text-container">
+    <h1>Task 2</h1>
+    <h2>Cover distance</h2>
+  </div>
+
+  <!-- Separator -->
+  <div class="separator"></div>
+
+  <!-- Explanation -->
+  <div class="text-container">
+    <p>Explanation:</p>
+    <p>You must move from the current location
+      20 meters from your current location. </p>
+  </div>
+
+  <!-- Separator -->
+  <div class="separator"></div>
+
+  <!-- Goal and Location Reached -->
+  <div class="text-container">
+    <div class="info-item">
+      <h2>Goal:</h2>
+    </div>
+  </div>
+
+  <!-- Continue Button -->
+  <ion-button class="continue-button">Continue</ion-button>
 </ion-content>
