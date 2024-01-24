@@ -25,7 +25,20 @@ ion-content {
   color: black;
 }
 .schnitzeljagd-container .schnitzel-text {
-  margin-top: -20vw;
+  margin-top: -18vw;
+}
+.schnitzeljagd-container .start-button {
+  background-color: white;
+  color: black;
+  padding: 5% 10%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 5vw;
+  margin-top: 7%;
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 10px;
 }
 
 /*# sourceMappingURL=start.page.css.map */

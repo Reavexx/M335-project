@@ -22,14 +22,14 @@ ion-content {
 .pause-button {
   width: 50px;
   height: 50px;
-  top: 20px;
+  top: 15px;
   left: 20px;
 }
 
 .schnitzeljagd-image {
   width: 100px;
   height: 100px;
-  top: 20px;
+  top: -15px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -41,6 +41,12 @@ ion-content {
 
 h1, h2, p {
   margin: 0;
+  color: black;
+  font-family: Samsung Medium;
+}
+
+h1 {
+  font-family: Samsung Bold;
 }
 
 .separator {
@@ -69,6 +75,19 @@ h1, h2, p {
   width: 100%;
   --background: #4CAF50; /* Green button color, adjust as needed */
   --color: #fff; /* Text color for the button */
+}
+
+@font-face {
+  font-family: "Samsung";
+  src: url("../../assets/samsungsharpsans.otf") format("opentype");
+}
+@font-face {
+  font-family: "Samsung Medium";
+  src: url("../../assets/samsungsharpsans-medium.otf") format("opentype");
+}
+@font-face {
+  font-family: "Samsung Bold";
+  src: url("../../assets/samsungsharpsans-bold.otf") format("opentype");
 }
 
 /*# sourceMappingURL=task1.page.css.map */
