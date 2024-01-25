@@ -34,11 +34,10 @@
     </div>
     <div class="info-item">
       <p>Location Reached:</p>
-      <ion-checkbox></ion-checkbox>
     </div>
   </div>
 
-  <ion-button (click)="printCurrentPosition()" >Location</ion-button>
+  <ion-button class="location-button" (click)="printCurrentPosition()" >Location</ion-button>
   <!-- Continue Button -->
   <ion-button class="continue-button" (click)="navigateToTask2()" [disabled]="distance < 1">Continue</ion-button>
 </ion-content>

@@ -3,7 +3,7 @@ ion-content {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Adjust as needed */
+  height: 100vh;
 }
 
 .container {
@@ -26,6 +26,14 @@ ion-content {
   left: 20px;
 }
 
+.camera-button {
+  margin-top: 20px;
+  transform: translateX(50%);
+  width: 50%;
+  --background: #0057FF;
+  --color: #fff;
+}
+
 .schnitzeljagd-image {
   width: 100px;
   height: 100px;
@@ -36,7 +44,7 @@ ion-content {
 
 .text-container {
   text-align: center;
-  margin-top: 40px; /* Adjust spacing from images */
+  margin-top: 40px;
 }
 
 h1, h2, p {
@@ -51,14 +59,14 @@ h1 {
 
 .separator {
   border-bottom: 6px solid #000;
-  margin: 20px 0; /* Increase margin for separation */
+  margin: 20px 0;
 }
 
 .info {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px; /* Add bottom margin */
+  margin-bottom: 20px;
 }
 .info .info-item {
   flex: 1;
@@ -73,8 +81,8 @@ h1 {
 .continue-button {
   margin-top: 20px;
   width: 100%;
-  --background: #4CAF50; /* Green button color, adjust as needed */
-  --color: #fff; /* Text color for the button */
+  --background: #4CAF50;
+  --color: #fff;
 }
 
 @font-face {
