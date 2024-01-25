@@ -1,8 +1,16 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
-import { IonIcon, IonTabBar, IonTabButton } from '@ionic/angular/standalone';
+import {
+  IonButton,
+  IonButtons,
+  IonContent,
+  IonHeader,
+  IonIcon,
+  IonTabBar,
+  IonTabButton,
+  IonToolbar,
+} from '@ionic/angular/standalone';
 import { Router } from '@angular/router';
 
 @Component({
@@ -11,12 +19,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.page.scss'],
   standalone: true,
   imports: [
-    IonicModule,
     CommonModule,
     FormsModule,
     IonIcon,
     IonTabBar,
     IonTabButton,
+    IonHeader,
+    IonToolbar,
+    IonButtons,
+    IonButton,
+    IonContent,
   ],
 })
 export class HomePage {

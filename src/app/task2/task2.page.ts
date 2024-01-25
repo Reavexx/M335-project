@@ -1,17 +1,37 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
 import { Geolocation } from '@capacitor/geolocation';
 import { Router } from '@angular/router';
 import { Haptics } from '@capacitor/haptics';
+import {
+  IonButton,
+  IonButtons,
+  IonContent,
+  IonHeader,
+  IonIcon,
+  IonTabBar,
+  IonTabButton,
+  IonToolbar,
+} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-task2',
   templateUrl: './task2.page.html',
   styleUrls: ['./task2.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonIcon,
+    IonTabBar,
+    IonTabButton,
+    IonHeader,
+    IonToolbar,
+    IonButtons,
+    IonButton,
+    IonContent,
+  ],
 })
 export class Task2Page {
   initialPosition: any = null; // You can use 'any' as the type if you don't want to specify a specific typ
@@ -34,20 +54,20 @@ export class Task2Page {
 
       console.log('Distance moved:', this.distance);
 
-      if (this.distance > 20) {
+      /*  if (this.distance > 20) {
         console.log('vibrate');
         this.triggerHapticFeedback();
-      }
+      }*/
     }
   };
 
-  async triggerHapticFeedback() {
+  /*async triggerHapticFeedback() {
     try {
       await Haptics.vibrate();
     } catch (error) {
       console.error('Error triggering haptic feedback:', error);
     }
-  }
+  }*/
 
   calculateDistance(
     lat1: number,

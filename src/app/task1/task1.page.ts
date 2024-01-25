@@ -1,16 +1,36 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
 import { Geolocation } from '@capacitor/geolocation';
 import { Router } from '@angular/router';
+import {
+  IonButton,
+  IonButtons,
+  IonContent,
+  IonHeader,
+  IonIcon,
+  IonTabBar,
+  IonTabButton,
+  IonToolbar,
+} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-task1',
   templateUrl: './task1.page.html',
   styleUrls: ['./task1.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    IonIcon,
+    IonTabBar,
+    IonTabButton,
+    IonHeader,
+    IonToolbar,
+    IonButtons,
+    IonButton,
+    IonContent,
+  ],
 })
 export class Task1Page {
   currentCoordinates: any = null;
@@ -19,7 +39,7 @@ export class Task1Page {
     latitude: 47.07194420332956,
     longitude: 8.348944967594608,
   };
-  targetRadius: number = 20; // Radius in meters
+  targetRadius: number = 100; // Radius in meters
 
   constructor(private router: Router) {}
 

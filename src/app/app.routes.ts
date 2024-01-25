@@ -19,7 +19,7 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/start',
+    redirectTo: '/task3',
     pathMatch: 'full',
   },
   {
@@ -40,6 +40,6 @@ export const routes: Routes = [
   },
   {
     path: 'task4',
-    loadComponent: () => import('./task4/task4.page').then( m => m.Task4Page)
+    loadComponent: () => import('./task4/task4.page').then((m) => m.Task4Page),
   },
 ];
