@@ -10,9 +10,9 @@ ion-content {
   position: relative;
   text-align: center;
   padding: 20px;
-  background-color: #fff; /* Add a background color */
-  border-radius: 10px; /* Add rounded corners */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .pause-button, .schnitzeljagd-image {

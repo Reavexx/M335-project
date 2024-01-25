@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-
+import { Geolocation } from '@capacitor/geolocation';
 @Component({
   selector: 'app-task2',
   templateUrl: './task2.page.html',
@@ -11,12 +11,9 @@ import { IonicModule } from '@ionic/angular';
   imports: [IonicModule, CommonModule, FormsModule],
 })
 export class Task2Page {
-  constructor() {}
+  printCurrentPosition = async () => {
+    const coordinates = await Geolocation.getCurrentPosition();
+
+    console.log('Current position:', coordinates);
+  };
 }
-import { Geolocation } from '@capacitor/geolocation';
-
-const printCurrentPosition = async () => {
-  const coordinates = await Geolocation.getCurrentPosition();
-
-  console.log('Current position:', coordinates);
-};
