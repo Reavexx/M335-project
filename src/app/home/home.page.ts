@@ -10,8 +10,30 @@ import { Router } from '@angular/router';
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule],
+  imports: [
+    IonicModule,
+    CommonModule,
+    FormsModule,
+    IonIcon,
+    IonTabBar,
+    IonTabButton,
+  ],
 })
 export class HomePage {
-  constructor() {}
+  /*constructor(private router: Router) {}
+  goToHome() {
+    this.router.navigate(['./home']);
+  }
+
+  goToRanking() {
+    this.router.navigate(['./ranking']);
+  }*/
+  constructor(private router: Router) {}
+  goToRanking() {
+    this.router.navigate(['./ranking']);
+  }
+
+  startGame() {
+    this.router.navigate(['./task1']);
+  }
 }

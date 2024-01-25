@@ -7,17 +7,18 @@ ion-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* Align items at the top */
   height: 100vh;
+  padding-top: 20px; /* Adjust as needed */
+
+  .text-container {
+    text-align: center;
+    margin-bottom: 20px;
+  }
 
   .schnitzeljagd-image {
     max-width: 100%;
     height: auto;
-    margin-bottom: 20px;
-  }
-
-  .text-container {
-    text-align: center;
   }
 
   .schnitzel-text, .jagd-text {
@@ -29,17 +30,17 @@ ion-content {
   }
 
   .schnitzel-text {
-    margin-top: -20vw;
+    margin-top: -18vw;
   }
 
-  // Styles for the permission popup modal
-  .permission-popup-modal {
-    ion-content {
-      text-align: center;
-
-      ion-button {
-        margin-top: 20px;
-      }
-    }
+  ion-button {
+    margin-top: 20px; /* Adjust as needed */
+    width: 100%;
+    --background: #4CAF50; /* Green button color, adjust as needed */
+    --color: #fff; /* Text color for the button */
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
   }
+  
 }

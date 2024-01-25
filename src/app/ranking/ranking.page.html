@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <!-- Top left corner: Home button -->
+    <ion-buttons slot="start">
+      <ion-button (click)="goToHome()">
+        Home
+      </ion-button>
+    </ion-buttons>
+
+    <!-- Top right corner: Ranking button -->
+    <ion-buttons slot="end">
+      <ion-button>
+        Ranking
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content [fullscreen]="true">
+  <!-- Your existing content here -->
+  <div class="schnitzeljagd-container">
+    <img src="assets/Schnitzeljagd.png" alt="Schnitzeljagd Bild" class="schnitzeljagd-image">
+    <div class="text-container">
+      <p class="schnitzel-text">SCHNITZEL</p>
+      <p class="jagd-text">RANKING</p>
+    </div>
+  </div>
+</ion-content>

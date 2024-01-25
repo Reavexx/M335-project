@@ -1,9 +1,31 @@
+<ion-header>
+    <ion-toolbar>
+        <!-- Top left corner: Home button -->
+        <ion-buttons slot="start">
+            <ion-button>
+                Home
+            </ion-button>
+        </ion-buttons>
+
+        <!-- Top right corner: Ranking button -->
+        <ion-buttons slot="end">
+            <ion-button (click)="goToRanking()">
+                Ranking
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+
+
 <ion-content [fullscreen]="true">
-    <div class="schnitzeljagd-container">
-        <img src="assets/Schnitzeljagd.png" alt="Schnitzeljagd Bild" class="schnitzeljagd-image">
-        <div class="text-container">
-            <p class="schnitzel-text">SCHNITZEL</p>
-            <p class="jagd-text">JAGD</p>
-        </div>
+  <!-- Updated content structure -->
+  <div class="schnitzeljagd-container">
+    <div class="text-container">
+      <img src="assets/Schnitzeljagd.png" alt="Schnitzeljagd Bild" class="schnitzeljagd-image">
+      <p class="schnitzel-text">SCHNITZEL</p>
+      <p class="jagd-text">JAGD</p>
     </div>
+    <ion-button expand="full" (click)="startGame()">Start Game</ion-button>
+  </div>
 </ion-content>
