@@ -39,5 +39,5 @@
 
   <ion-button class="location-button" (click)="printCurrentPosition()" >Location</ion-button>
   <!-- Continue Button -->
-  <ion-button class="continue-button" (click)="navigateToTask2()" [disabled]="distance < 1">Continue</ion-button>
+  <ion-button class="continue-button" (click)="navigateToTask2()" [disabled]="!isWithinRadius">Continue</ion-button>
 </ion-content>
