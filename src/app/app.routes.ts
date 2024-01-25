@@ -23,7 +23,7 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/task2',
+    redirectTo: '/start',
     pathMatch: 'full',
   },
   {
@@ -33,6 +33,13 @@ export const routes: Routes = [
   },
   {
     path: 'introduction',
-    loadComponent: () => import('./introduction/introduction.page').then( m => m.IntroductionPage)
+    loadComponent: () =>
+      import('./introduction/introduction.page').then(
+        (m) => m.IntroductionPage,
+      ),
+  },
+  {
+    path: 'task3',
+    loadComponent: () => import('./task3/task3.page').then( m => m.Task3Page)
   },
 ];
