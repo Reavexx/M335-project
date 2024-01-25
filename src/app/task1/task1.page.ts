@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { Geolocation } from '@capacitor/geolocation';
 import { Router } from '@angular/router';
-import { Haptics, ImpactStyle } from '@capacitor/haptics';
 
 @Component({
   selector: 'app-task1',

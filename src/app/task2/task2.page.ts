@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { Geolocation } from '@capacitor/geolocation';
 import { Router } from '@angular/router';
+import { Haptics } from '@capacitor/haptics';
 
 @Component({
   selector: 'app-task2',
@@ -32,8 +33,21 @@ export class Task2Page {
       );
 
       console.log('Distance moved:', this.distance);
+
+      if (this.distance > 20) {
+        console.log('vibrate');
+        this.triggerHapticFeedback();
+      }
     }
   };
+
+  async triggerHapticFeedback() {
+    try {
+      await Haptics.vibrate();
+    } catch (error) {
+      console.error('Error triggering haptic feedback:', error);
+    }
+  }
 
   calculateDistance(
     lat1: number,
