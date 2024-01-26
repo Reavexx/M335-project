@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Camera, CameraResultType } from '@capacitor/camera';
+import { BarcodeScanner } from '@capacitor-community/barcode-scanner';
 import {
   IonButton,
   IonButtons,
@@ -12,40 +12,36 @@ import {
   IonTabButton,
   IonToolbar,
 } from '@ionic/angular/standalone';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-task3',
   templateUrl: './task3.page.html',
   styleUrls: ['./task3.page.scss'],
   standalone: true,
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonIcon,
-    IonTabBar,
-    IonTabButton,
-    IonHeader,
-    IonToolbar,
-    IonButtons,
-    IonButton,
-    IonContent,
-  ],
+  imports: [CommonModule, FormsModule, IonContent, IonButton],
 })
 export class Task3Page {
-  imageUrl?: string;
+  constructor(private router: Router) {}
+
+  navigateToTask4() {
+    this.router.navigate(['/task4']);
+  }
+
+  isCameraOpen: boolean = false;
+  qrCorrect: boolean = false;
 
   async openCamera() {
-    // @ts-ignore
-    const image = await Camera.getPhoto({
-      quality: 90,
-      allowEditing: true,
-      resultType: CameraResultType.Uri,
-    });
+    // Use Capacitor's BarcodeScanner plugin to scan QR codes
+    const result = await BarcodeScanner.startScan();
 
-    // image.webPath will contain a path that can be set as an image src.
-    // You can access the original file using image.path, which can be
-    // passed to the Filesystem API to read the raw data of the image,
-    // if desired (or pass resultType: CameraResultType.Base64 to getPhoto)
-    this.imageUrl = image.webPath;
+    // Handle the barcode scan result
+    console.log('Barcode scan result:', result);
+
+    // Check if the scanned QR code matches the expected string
+    this.qrCorrect = result.hasContent && result.content === 'M335@ICT-BZ';
+
+    // You can do something with the result here, e.g., update your UI or process the scanned data
+    this.isCameraOpen = true;
   }
 }

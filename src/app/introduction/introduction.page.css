@@ -37,6 +37,19 @@ ion-content {
 .text-container {
   text-align: center;
   margin-top: 40px;
+  margin-bottom: 20px;
+}
+.text-container.with-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text-container.with-icon .icon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+.text-container.with-icon .rules {
+  flex: 1;
 }
 
 h1, h2, p {

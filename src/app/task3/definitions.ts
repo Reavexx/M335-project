@@ -4,16 +4,11 @@ export interface BarcodeScannerPlugin {
   hideBackground(): Promise<void>;
   showBackground(): Promise<void>;
   startScan(options?: ScanOptions): Promise<ScanResult>;
-  startScanning(
-    options?: ScanOptions,
-    callback?: (result: ScanResult, err?: any) => void,
-  ): Promise<CallbackID>;
+  startScanning(options?: ScanOptions, callback?: (result: ScanResult, err?: any) => void): Promise<CallbackID>;
   pauseScanning(): Promise<void>;
   resumeScanning(): Promise<void>;
   stopScan(options?: StopScanOptions): Promise<void>;
-  checkPermission(
-    options?: CheckPermissionOptions,
-  ): Promise<CheckPermissionResult>;
+  checkPermission(options?: CheckPermissionOptions): Promise<CheckPermissionResult>;
   openAppSettings(): Promise<void>;
   enableTorch(): Promise<void>;
   disableTorch(): Promise<void>;
@@ -94,16 +89,14 @@ const _SupportedFormat = {
 export const SupportedFormat = _SupportedFormat satisfies {
   [k in SupportedFormat]: k;
 };
-export type SupportedFormat =
-  (typeof _SupportedFormat)[keyof typeof _SupportedFormat];
+export type SupportedFormat = typeof _SupportedFormat[keyof typeof _SupportedFormat];
 
 export const CameraDirection = {
   FRONT: 'front',
   BACK: 'back',
 } as const;
 
-export type CameraDirection =
-  (typeof CameraDirection)[keyof typeof CameraDirection];
+export type CameraDirection = typeof CameraDirection[keyof typeof CameraDirection];
 
 export interface ScanOptions {
   /**
