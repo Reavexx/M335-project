@@ -40,7 +40,7 @@ export class Task1Page {
     latitude: 47.07194420332956,
     longitude: 8.348944967594608,
   };
-  targetRadius: number = 50; // Radius in meters
+  targetRadius: number = 100; // Radius in meters
 
   constructor(private router: Router) {}
 
@@ -64,11 +64,11 @@ export class Task1Page {
     this.isWithinRadius = this.distance <= this.targetRadius;
 
     if (this.isWithinRadius) {
-      console.log('You are within 50 meters of the target coordinates.');
+      console.log('You are within 100 meters of the target coordinates.');
       this.vibrate();
     } else {
       console.log(
-        'You are outside the 50-meter radius of the target coordinates.',
+        'You are outside the 100-meter radius of the target coordinates.',
       );
     }
   }
@@ -109,4 +109,10 @@ export class Task1Page {
   navigateToTask2() {
     this.router.navigate(['/task2']);
   }
+
+  goToHome() {
+    this.router.navigate(['./home']);
+    clearInterval(this.timer);
+  }
+  timer: any;
 }

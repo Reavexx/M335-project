@@ -34,7 +34,7 @@ import {
   ],
 })
 export class Task2Page {
-  initialPosition: any = null; // You can use 'any' as the type if you don't want to specify a specific typ
+  initialPosition: any = null;
   distance: number = 0;
 
   constructor(private router: Router) {}
@@ -54,20 +54,20 @@ export class Task2Page {
 
       console.log('Distance moved:', this.distance);
 
-      /*  if (this.distance > 20) {
-        console.log('vibrate');
-        this.triggerHapticFeedback();
-      }*/
+      if (this.distance > 20) {
+        this.vibrate();
+      }
     }
   };
 
-  /*async triggerHapticFeedback() {
+  async vibrate() {
     try {
       await Haptics.vibrate();
+      console.log('Vibration erfolgreich durchgeführt.');
     } catch (error) {
-      console.error('Error triggering haptic feedback:', error);
+      console.error('Error during vibration:', error);
     }
-  }*/
+  }
 
   calculateDistance(
     lat1: number,
@@ -94,6 +94,12 @@ export class Task2Page {
   }
 
   navigateToTask3() {
-    this.router.navigate(['/start']);
+    this.router.navigate(['/task3']);
   }
+
+  goToHome() {
+    this.router.navigate(['./home']);
+    clearInterval(this.timer);
+  }
+  timer: any;
 }

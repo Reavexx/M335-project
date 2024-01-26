@@ -4,13 +4,13 @@
       <img src="assets/Schnitzeljagd.png" alt="Schnitzeljagd Bild" class="schnitzeljagd-image">
       <div class="text-container">
       </div>
-      <img src="assets/pause.png" alt="pause button" class="pause-button" (click)="goToHome()">
+      <img src="assets/pause.png" alt="pause button" class="pause-button" (click)="navigateToHome()">
     </div>
   </nav>
 
   <!-- Title -->
   <div class="text-container">
-    <h1>The Game</h1>
+    <h1>The Finish</h1>
   </div>
 
   <!-- Separator -->
@@ -18,19 +18,18 @@
 
 
   <div class="text-container">
-    <img src="../../assets/tick.png" alt="Checkmark">
-    <p>When the task is completed, the checkmark is activated, and you will get a schnitzel.</p>
+    <img src="../../assets/Schnitzel.png" alt="Checkmark">
+    <p>Earned Schnitzel: 4</p>
   </div>
 
   <div class="text-container">
-    <img src="../../assets/timer.png" alt="Timer">
-    <p>If you take too long to complete a task, you get rotten potatoes.</p>
+    <img src="../../assets/Kartoffeln.png" alt="Timer">
+    <p>Earned Potatoes: 10</p>
   </div>
 
 
   <!-- Separator -->
   <div class="separator"></div>
   <!-- Continue Button -->
-  <ion-button class="continue-button" (click)="Continue()">Continue</ion-button>
-
+  <ion-button class="continue-button" (click)="navigateToHome()">Back to Start</ion-button>
 </ion-content>

@@ -27,14 +27,6 @@ ion-content {
 
 }
 
-.location-button {
-  margin-top: 20px;
-  transform: translateX(6%);
-  width: 90%;
-  --background: #0057FF; /* Green button color, adjust as needed */
-  --color: #fff; /* Text color for the button */
-}
-
 .schnitzeljagd-image {
   width: 100px;
   height: 100px;
@@ -44,8 +36,26 @@ ion-content {
 }
 
 .text-container {
-  text-align: center;
-  margin-top: 40px; /* Adjust spacing from images */
+  margin-top: 40px;
+
+  .text-container img {
+    margin-right: 10px; /* Adjust the margin as needed */
+  }
+
+  &.with-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+
+    .rules {
+      flex: 1;
+    }
+  }
 }
 
 h1, h2, p {
@@ -58,18 +68,16 @@ h1 {
   font-family: Samsung Bold;
 }
 
-
-
 .separator {
   border-bottom: 6px solid #000;
-  margin: 20px 0; /* Increase margin for separation */
+  margin: 20px 0;
 }
 
 .info {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px; /* Add bottom margin */
+  margin-bottom: 20px;
 
   .info-item {
     flex: 1;
@@ -87,18 +95,9 @@ h1 {
 .continue-button {
   margin-top: 20px;
   width: 100%;
-  --background: #4CAF50; /* Green button color, adjust as needed */
-  --color: #fff; /* Text color for the button */
+  --background: #4CAF50;
+  --color: #fff;
 }
-
-.skip-button{
-  margin-top: 20px;
-  transform: translateX(50%);
-  width: 50%;
-  --background: red; /* Green button color, adjust as needed */
-  --color: #fff; /* Text color for the button */
-}
-
 
 @font-face {
   font-family: 'Samsung';
@@ -115,9 +114,16 @@ h1 {
   src: url('../../assets/samsungsharpsans-bold.otf') format('opentype');
 }
 
-.bottom-image {
-  width: 50%;
-  length: 50%;
-  transform: translateX(50%);
-  margin-top: 50px;
+.text-container {
+  display: flex;
+  align-items: center;
+}
+
+.text-container img {
+  margin-right: 10px;
+}
+
+img {
+  width: 50px;
+  length:50px;
 }

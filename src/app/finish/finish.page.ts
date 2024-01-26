@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
 import {
   IonButton,
   IonButtons,
+  IonCheckbox,
   IonContent,
   IonHeader,
   IonIcon,
@@ -12,11 +12,12 @@ import {
   IonTabButton,
   IonToolbar,
 } from '@ionic/angular/standalone';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-start',
-  templateUrl: './start.page.html',
-  styleUrls: ['./start.page.scss'],
+  selector: 'app-finish',
+  templateUrl: './finish.page.html',
+  styleUrls: ['./finish.page.scss'],
   standalone: true,
   imports: [
     CommonModule,
@@ -29,9 +30,11 @@ import {
     IonButtons,
     IonButton,
     IonContent,
+    IonCheckbox,
+    NgOptimizedImage,
   ],
 })
-export class StartPage {
+export class FinishPage {
   constructor(private router: Router) {}
   navigateToHome() {
     this.router.navigate(['./home']);

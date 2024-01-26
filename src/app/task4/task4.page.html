@@ -1,13 +1,41 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>task4</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
+  <nav>
+    <div class="container">
+      <img src="assets/Schnitzeljagd.png" alt="Schnitzeljagd Bild" class="schnitzeljagd-image">
+      <div class="text-container">
+      </div>
+      <img src="assets/pause.png" alt="pause button" class="pause-button" (click)="goToHome()">
+    </div>
+  </nav>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">task4</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+  <!-- Title -->
+  <div class="text-container">
+    <h1>Task 4</h1>
+    <h2>Device Status</h2>
+  </div>
+
+  <!-- Separator -->
+  <div class="separator"></div>
+
+  <!-- Explanation -->
+  <div class="text-container">
+    <p>Explanation:</p>
+    <p>You must connect your device to the power.</p>
+  </div>
+
+  <!-- Separator -->
+  <div class="separator"></div>
+
+  <!-- Goal and Location Reached -->
+  <div class="text-container">
+    <div class="info-item">
+    </div>
+  </div>
+  <ion-button class="continue-button" (click)="navigateToFinish()" [disabled]="!isCharging">
+    Finish
+  </ion-button>
+  <ion-button class="skip-button" (click)="navigateToFinish()">Skip</ion-button>
+
+
 </ion-content>

@@ -2,6 +2,7 @@ import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { BarcodeScanner } from '@capacitor-community/barcode-scanner';
+import { Haptics } from '@capacitor/haptics';
 import {
   IonButton,
   IonButtons,
@@ -32,16 +33,30 @@ export class Task3Page {
   qrCorrect: boolean = false;
 
   async openCamera() {
-    // Use Capacitor's BarcodeScanner plugin to scan QR codes
     const result = await BarcodeScanner.startScan();
 
-    // Handle the barcode scan result
     console.log('Barcode scan result:', result);
 
-    // Check if the scanned QR code matches the expected string
     this.qrCorrect = result.hasContent && result.content === 'M335@ICT-BZ';
 
-    // You can do something with the result here, e.g., update your UI or process the scanned data
+    if (this.qrCorrect) {
+      this.vibrate();
+    }
+
     this.isCameraOpen = true;
   }
+  async vibrate() {
+    try {
+      await Haptics.vibrate();
+      console.log('Vibration erfolgreich durchgeführt.');
+    } catch (error) {
+      console.error('Error during vibration:', error);
+    }
+  }
+
+  goToHome() {
+    this.router.navigate(['./home']);
+    clearInterval(this.timer);
+  }
+  timer: any;
 }

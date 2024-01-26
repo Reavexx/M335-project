@@ -32,20 +32,12 @@ import { Router } from '@angular/router';
   ],
 })
 export class HomePage {
-  /*constructor(private router: Router) {}
-  goToHome() {
-    this.router.navigate(['./home']);
-  }
-
-  goToRanking() {
-    this.router.navigate(['./ranking']);
-  }*/
   constructor(private router: Router) {}
   goToRanking() {
     this.router.navigate(['./ranking']);
   }
 
   startGame() {
-    this.router.navigate(['./task1']);
+    this.router.navigate(['./introduction']);
   }
 }
