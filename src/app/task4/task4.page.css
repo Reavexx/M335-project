@@ -85,6 +85,14 @@ h1 {
   --color: #fff;
 }
 
+.skip-button {
+  margin-top: 20px;
+  transform: translateX(50%);
+  width: 50%;
+  --background: red; /* Green button color, adjust as needed */
+  --color: #fff; /* Text color for the button */
+}
+
 @font-face {
   font-family: "Samsung";
   src: url("../../assets/samsungsharpsans.otf") format("opentype");
@@ -96,6 +104,12 @@ h1 {
 @font-face {
   font-family: "Samsung Bold";
   src: url("../../assets/samsungsharpsans-bold.otf") format("opentype");
+}
+.bottom-image {
+  width: 50%;
+  length: 50%;
+  transform: translateX(50%);
+  margin-top: 50px;
 }
 
 /*# sourceMappingURL=task4.page.css.map */

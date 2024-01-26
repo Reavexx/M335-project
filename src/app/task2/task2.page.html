@@ -21,8 +21,7 @@
   <!-- Explanation -->
   <div class="text-container">
     <p>Explanation:</p>
-    <p>You must move from the current location
-      20 meters from your current location. </p>
+    <p>You must move from the current location 20 meters</p>
   </div>
 
   <!-- Separator -->
@@ -31,10 +30,11 @@
   <!-- Goal and Location Reached -->
   <div class="text-container">
     <div class="info-item">
-      <h2>Goal:</h2>
     </div>
   </div>
 
-  <ion-button (click)="printCurrentPosition()" >Location</ion-button>
+  <ion-button class="location-button"(click)="printCurrentPosition()">Current Location</ion-button>
   <ion-button class="continue-button" (click)="navigateToTask3()" [disabled]="distance < 20">Continue</ion-button>
+  <ion-button class="skip-button" (click)="navigateToTask3()">Skip</ion-button>
+
 </ion-content>

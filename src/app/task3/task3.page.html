@@ -35,6 +35,8 @@
   </div>
   <ion-button class="camera-button" (click)="openCamera()" >Open Camera</ion-button>
   <ion-button class="continue-button" [disabled]="!qrCorrect" (click)="navigateToTask4()">Continue</ion-button>
+  <ion-button class="skip-button" (click)="navigateToTask4()">Skip</ion-button>
+
 
 
   <div *ngIf="isCameraOpen">

@@ -4,8 +4,7 @@
       <img src="assets/Schnitzeljagd.png" alt="Schnitzeljagd Bild" class="schnitzeljagd-image">
       <div class="text-container">
       </div>
-      <img src="assets/pause.png" alt="pause button" class="pause-button" (click)="togglePauseOverlay()">
-
+      <img src="assets/pause.png" alt="pause button" class="pause-button">
     </div>
   </nav>
 
@@ -23,6 +22,7 @@
   <div class="text-container">
     <p>Explanation:</p>
     <p>You must move around the perimeter of the ping pong table.</p>
+
   </div>
 
   <!-- Separator -->
@@ -31,14 +31,14 @@
   <!-- Goal and Location Reached -->
   <div class="text-container">
     <div class="info-item">
-      <p>Goal:</p>
     </div>
     <div class="info-item">
-      <p>Location Reached:</p>
     </div>
   </div>
 
-  <ion-button class="location-button" (click)="printCurrentPosition()" >Location</ion-button>
+  <ion-button class="location-button"(click)="printCurrentPosition()">Current Location</ion-button>
   <!-- Continue Button -->
   <ion-button class="continue-button" (click)="navigateToTask2()" [disabled]="!isWithinRadius">Continue</ion-button>
+  <ion-button class="skip-button" (click)="navigateToTask2()">Skip</ion-button>
+
 </ion-content>
