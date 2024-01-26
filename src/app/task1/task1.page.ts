@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Geolocation } from '@capacitor/geolocation';
 import { Router } from '@angular/router';
+import { Haptics } from '@capacitor/haptics';
 import {
   IonButton,
   IonButtons,
@@ -39,7 +40,7 @@ export class Task1Page {
     latitude: 47.07194420332956,
     longitude: 8.348944967594608,
   };
-  targetRadius: number = 100; // Radius in meters
+  targetRadius: number = 50; // Radius in meters
 
   constructor(private router: Router) {}
 
@@ -63,12 +64,20 @@ export class Task1Page {
     this.isWithinRadius = this.distance <= this.targetRadius;
 
     if (this.isWithinRadius) {
-      console.log('You are within 20 meters of the target coordinates.');
-      // Add further actions if needed
+      console.log('You are within 50 meters of the target coordinates.');
+      this.vibrate();
     } else {
       console.log(
-        'You are outside the 20-meter radius of the target coordinates.',
+        'You are outside the 50-meter radius of the target coordinates.',
       );
+    }
+  }
+  async vibrate() {
+    try {
+      await Haptics.vibrate();
+      console.log('Vibration erfolgreich durchgeführt.');
+    } catch (error) {
+      console.error('Error during vibration:', error);
     }
   }
 
